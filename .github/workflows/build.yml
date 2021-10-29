@@ -24,8 +24,6 @@ jobs:
         run: |
           wget -q $ANDROID_STUDIO_URL
           tar -xf android-studio-2020.3.1.25-linux.tar.gz -C ./
-      - name: Test plugins
-        run: ./gradlew test -DandroidStudioPath="$(pwd)/android-studio" -DandroidStudioCompilerVersion="$COMPILER_VERSION"
       - name: Build plugins
         run: ./gradlew buildAllPlugins -DandroidStudioPath="$(pwd)/android-studio" -DandroidStudioCompilerVersion="$COMPILER_VERSION"
       - name: Publish plugins
