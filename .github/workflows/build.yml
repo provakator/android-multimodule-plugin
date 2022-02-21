@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - add_predefined_features_parameters
 
 env:
   # Link for Linux zip file from https://developer.android.com/studio/archive
