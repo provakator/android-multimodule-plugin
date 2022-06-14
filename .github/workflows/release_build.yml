@@ -1,9 +1,6 @@
 name: Publish plugins artifacts
 
-on:
-  push:
-    branches:
-      - master
+on: [push, pull_request, workflow_dispatch]
 
 env:
   # Link for Linux zip file from https://developer.android.com/studio/archive
