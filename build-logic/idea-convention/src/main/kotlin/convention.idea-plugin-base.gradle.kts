@@ -31,3 +31,10 @@ tasks.getByName<IntelliJInstrumentCodeTask>("instrumentCode") {
         compilerVersion.set(currentVersion.compilerVersion)
     }
 }
+
+tasks.getByName<RunIdeTask>("runIde") {
+    val currentVersion = Libs.chosenIdeaVersion
+    if (currentVersion is ExternalLibrariesExtension.Product.LocalIde) {
+        ideDir.set(File(currentVersion.pathToIdeForRun))
+    }
+}
